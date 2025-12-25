@@ -19,7 +19,7 @@
 1. 第三部输入每个恶意IP的封禁时间（单位：小时）
 
 # 卸载 #
-    wget https://raw.githubusercontent.com/FunctionClub/Fail2ban/master/uninstall.sh && bash uninstall.sh
+    wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/uninstall.sh && bash uninstall.sh
 
 # 注意事项 #
 1. 安装完成后请会重启SSH服务，请重新连接SSH会话
