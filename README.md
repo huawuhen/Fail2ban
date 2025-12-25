@@ -2,7 +2,7 @@
 这是一个利用iptables和开源程序fail2ban来进行服务器简单防爆破的脚本。默认自带SSH防御规则。
 
 # 功能 #
-- 自助修改SSH端口
+- 智能纠错环境提高安装成功率
 - 自定义最高封禁IP的时间（以小时为单位）
 - 自定义SSH尝试连接次数
 - 一键完成SSH防止暴力破解
@@ -17,10 +17,12 @@
 默认封禁策略可在 `/etc/fail2ban/jail.local`查看；默认策略是AI给出的稳健性。
 
 ## 安装互动版
-   `wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/f2b.sh chmod +x f2b.sh && bash f2b.sh`
+    wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/f2b.sh chmod +x f2b.sh && bash f2b.sh
 
     1. 输入最多尝试输入SSH连接密码的次数
     2. 输入每个恶意IP的封禁时间（单位：小时）
+
+> 如果后续修改了SSH端口，再执行安装一遍即可
 
 # 卸载 #
     wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/uninstall.sh && bash uninstall.sh
