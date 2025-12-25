@@ -12,11 +12,15 @@
 - Ubuntu 16+ (x86/x64)
 - Debian 7+ (x86/x64)
 
-# 安装 #
+# 一键安装 #
     wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/fail2ban.sh && chmod +x fail2ban.sh && bash fail2ban.sh
-1. 第一步选择是否修改SSH端口。如果你已在`sshd.conf`已修改非默认22这里就不用改了。
-1. 第二部输入最多尝试输入SSH连接密码的次数
-1. 第三部输入每个恶意IP的封禁时间（单位：小时）
+默认封禁策略可在 `/etc/fail2ban/jail.local`查看；默认策略是AI给出的稳健性。
+
+## 安装互动版
+   `wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/f2b.sh chmod +x f2b.sh && bash f2b.sh`
+
+    1. 输入最多尝试输入SSH连接密码的次数
+    2. 输入每个恶意IP的封禁时间（单位：小时）
 
 # 卸载 #
     wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/uninstall.sh && bash uninstall.sh
