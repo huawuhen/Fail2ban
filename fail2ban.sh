@@ -58,7 +58,7 @@ while :; do echo
     if [ -e "/etc/ssh/sshd_config" ];then
     [ -z "`grep ^Port /etc/ssh/sshd_config`" ] && ssh_port=22 || ssh_port=`grep ^Port /etc/ssh/sshd_config | awk '{print $2}'`
     while :; do echo
-        read -p "Please input SSH port(Default: $ssh_port): " SSH_PORT
+        read -p "输入自定义端口input SSH port(默认Default: $ssh_port): " SSH_PORT
         [ -z "$SSH_PORT" ] && SSH_PORT=$ssh_port
         if [ $SSH_PORT -eq 22 >/dev/null 2>&1 -o $SSH_PORT -gt 1024 >/dev/null 2>&1 -a $SSH_PORT -lt 65535 >/dev/null 2>&1 ];then
             break
@@ -81,9 +81,9 @@ while :; do echo
 done
 ssh_port=$SSH_PORT
 echo ""
-	read -p "Input the maximun times for trying [2-10]:  " maxretry
+	read -p "最大尝试连接次数 Input max try times [2-10]:  " maxretry
 echo ""
-read -p "Input the lasting time for blocking a IP [hours]:  " bantime
+read -p "IP封禁时间 input IP block duration [hours]:  " bantime
 if [ ${maxretry} == '' ]; then
 	maxretry=3
 fi
