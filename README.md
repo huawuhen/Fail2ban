@@ -13,7 +13,7 @@
 - Debian 7+ (x86/x64)
 
 # 安装 #
-    wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/fail2ban.sh && bash fail2ban.sh 2>&1 | tee fail2ban.log
+    wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/fail2ban.sh && chmod +x fail2ban.sh && bash fail2ban.sh
 1. 第一步选择是否修改SSH端口。如果你已在`sshd.conf`已修改非默认22这里就不用改了。
 1. 第二部输入最多尝试输入SSH连接密码的次数
 1. 第三部输入每个恶意IP的封禁时间（单位：小时）
