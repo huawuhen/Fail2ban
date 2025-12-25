@@ -14,22 +14,21 @@
 
 # 一键安装 #
     wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/fail2ban.sh && chmod +x fail2ban.sh && bash fail2ban.sh
-默认封禁策略可在 `/etc/fail2ban/jail.local`查看；默认策略是AI给出的稳健性。
+> 默认封禁策略可在 `/etc/fail2ban/jail.local`查看；默认策略是AI给出的稳健性。
+> 
+> 如果后续修改了SSH端口，再执行安装一遍即可
 
 ## 安装互动版
     wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/f2b.sh chmod +x f2b.sh && bash f2b.sh
 
-    1. 输入最多尝试输入SSH连接密码的次数
-    2. 输入每个恶意IP的封禁时间（单位：小时）
+   
+1. 输入最多尝试输入SSH连接密码的次数
+2. 输入每个恶意IP的封禁时间（单位：小时）
 
 > 如果后续修改了SSH端口，再执行安装一遍即可
 
 # 卸载 #
     wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/uninstall.sh && bash uninstall.sh
-
-# 注意事项 #
-1. 安装完成后请会重启SSH服务，请重新连接SSH会话
-2. 若出现SSH无法连接的情况，请检查是否修改过SSH端口，请填写写改后的正确端口进行连接
 
 # 常用命令
 - 查看运行状态 `fail2ban-client status sshd`
@@ -45,8 +44,9 @@
 ```
 - 手动阻住某IP `fail2ban-client set sshd banip <IP地址>`
 - 手动解除某IP `fail2ban-client set sshd unbanip <IP地址>`
+
 # 更新日志 #
-2025.12.25 提示步骤中英汉化
+2025.12.25 更新优化脚本
 2016.11.15 第一次提交，初步完成。
 
 # 关于 #
