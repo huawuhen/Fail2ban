@@ -19,7 +19,7 @@
 > 如果后续修改了SSH端口，再执行安装一遍即可
 
 ## 安装互动版
-    wget https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/f2b.sh chmod +x f2b.sh && bash f2b.sh
+    curl -fsSL https://raw.githubusercontent.com/huawuhen/Fail2ban/refs/heads/master/f2b.sh  > f2b.sh && chmod +x f2b.sh && ./f2b.sh
 
    
 1. 输入最多尝试输入SSH连接密码的次数
